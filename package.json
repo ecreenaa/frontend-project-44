@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "suffer",
-  "type": "module", 
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ecreenaa/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/ecreenaa/frontend-project-44#readme"
+  "homepage": "https://github.com/ecreenaa/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
