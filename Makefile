@@ -12,3 +12,7 @@ lint:
 
 fix:
 		npx eslint . --fix
+gitthing:
+		git add .
+		git commit -m 'smthn'
+		git push
