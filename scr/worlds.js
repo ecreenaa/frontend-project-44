@@ -4,21 +4,21 @@ export const type = (str) => {
   console.log(str);
 };
 
-export const answerForm = (variable, dataTape) => {
-  const result = readlineSync.question(`Question: ${variable} \nYour answer: `);
-  if (dataTape === 'string') {
+export const answer = (meanig, data) => {
+  const result = readlineSync.question(`Question: ${meanig} \nYour answer: `);
+  if (data === 'string') {
     return result;
   }
   return parseInt(result, 10);
 };
 
-export const checkAnswer = (userAnswer, correctAnswer, name, attempts) => {
+export const checkAnswer = (userAnswer, correctAnswer, userName, attempt) => {
   if (userAnswer === correctAnswer) {
     type('Correct!');
   } else {
-    type(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}' . /nLet's try again, ${name}!`);
+    type(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}' . \nLet's try again, ${userName}`);
     return false;
   }
-  if (attempts === 2) type(`Congratulations, ${name}!`);
+  if (attempt === 2) type(`Congratulations, ${userName}!`);
   return true;
 };
