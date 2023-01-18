@@ -1,17 +1,20 @@
 export const numbers = (min = 1, max = 100) => {
-  const minimal = Math.ceil(min);
-  const maximum = Math.floor(max);
-  const randomNamber = Math.floor(Math.random() * (maximum - minimal)) + minimal;
+  const mini = Math.ceil(min);
+  const maxi = Math.floor(max);
+  const randomNamber = Math.floor(Math.random() * (maxi - mini + 1)) + mini;
   return randomNamber;
 };
 
-export const prog = (n, a) => {
-  let result = '';
-  const length = numbers(5, 10);
-  const hidden = numbers(1, length - 1);
-  for (let i = 0; i < length; i += 1) {
-    const currentNum = (n + (a * i));
-    result += (i !== hidden) ? `${currentNum} ` : '.. ';
-  }
+export const basicMath = (x, y, oper) => {
+  let result = 0;
+  if (oper === '+') result = x + y;
+  if (oper === '-') result = x - y;
+  if (oper === '*') result = x * y;
   return result;
+};
+
+export const getOperator = (array) => {
+  const index = Math.floor(Math.random() * array.length);
+  const operator = array[index];
+  return operator;
 };
