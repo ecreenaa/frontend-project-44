@@ -44,10 +44,10 @@ export const progressionS = (str) => {
 export const prog = (n, a) => {
   let result = '';
   const length = numbers(5, 10);
-  const hidden = numbers(1, length - 1);
+  const putaway = numbers(1, length - 1);
   for (let i = 0; i < length; i += 1) {
     const currentNum = (n + (a * i));
-    result += (i !== hidden) ? `${currentNum} ` : '.. ';
+    result += (i !== putaway) ? `${currentNum} ` : '.. ';
   }
   return result;
 };
