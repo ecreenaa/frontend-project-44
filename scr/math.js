@@ -31,3 +31,23 @@ export const Divisor = (a, b) => {
   }
   return x;
 };
+
+export const progressionS = (str) => {
+  const sort = str.split(' ');
+  const indexSearch = sort.indexOf('..');
+  const prevNeighboor = parseInt(sort[indexSearch - 1], 10);
+  const nextNeighboor = parseInt(sort[indexSearch + 1], 10);
+  const solve = (prevNeighboor + nextNeighboor) / 2;
+  return `${solve}`;
+};
+
+export const prog = (n, a) => {
+  let result = '';
+  const length = numbers(5, 10);
+  const hidden = numbers(1, length - 1);
+  for (let i = 0; i < length; i += 1) {
+    const currentNum = (n + (a * i));
+    result += (i !== hidden) ? `${currentNum} ` : '.. ';
+  }
+  return result;
+};
