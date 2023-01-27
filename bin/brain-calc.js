@@ -7,8 +7,8 @@ const calc = () => {
 
   for (let attempts = 0; attempts < 3; attempts += 1) {
     const currentOperator = getOperator(['+', '-', '*']);
-    const x = numbers(2, 20);
-    const y = numbers(2, 20);
+    const x = numbers(2, 15);
+    const y = numbers(2, 15);
     const output = `${x} ${currentOperator} ${y}`;
     const userAnswer = answer(output);
     let correctAnswer = 0;
