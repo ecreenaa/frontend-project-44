@@ -31,3 +31,11 @@ export const Divisor = (a, b) => {
   }
   return x;
 };
+export const progressionS = (str) => {
+  const sort = str.split(' ');
+  const indexSearch = sort.index('..');
+  const prevNeighboor = parseInt(sort[indexSearch - 1], 10);
+  const nextNeighboor = parseInt(sort[indexSearch + 1], 10);
+  const solve = (prevNeighboor + nextNeighboor) / 2;
+  return `${solve}`;
+};
