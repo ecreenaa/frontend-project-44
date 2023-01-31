@@ -36,8 +36,8 @@ export const prog = (n, a) => {
   const length = numbers(5, 10);
   const hidden = numbers(1, length - 1);
   for (let i = 0; i < length; i += 1) {
-    const currentNum = (n + (a * i));
-    result += (i !== hidden) ? `${currentNum} ` : '.. ';
+    const current = (n + (a * i));
+    result += (i !== hidden) ? `${current} ` : '.. ';
   }
   return result;
 };
@@ -51,7 +51,7 @@ export const progression = (str) => {
   return `${solve}`;
 };
 
-export const str = (number) => {
+export const prime = (number) => {
   for (let attempts = 2; attempts < number; attempts += 1) {
     if (number % attempts === 0) {
       return false;
