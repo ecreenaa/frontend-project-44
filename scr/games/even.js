@@ -13,5 +13,4 @@ const gameEven = () => {
   }
 };
 
-gameEven();
 export default gameEven;
