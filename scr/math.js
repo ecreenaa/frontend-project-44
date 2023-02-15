@@ -31,10 +31,11 @@ export const Divisor = (a, b) => {
   }
   return x;
 };
+
 export const prog = (n, a) => {
   let result = '';
   const length = numbers(5, 10);
-  const hidden = numbers(1, length - 1);
+  const hidden = numbers(1, length - 2);
   for (let i = 0; i < length; i += 1) {
     const current = (n + (a * i));
     result += (i !== hidden) ? `${current} ` : '.. ';
@@ -48,24 +49,5 @@ export const progression = (str) => {
   const prevNeighboor = parseInt(sort[indexSearch - 1], 10);
   const nextNeighboor = parseInt(sort[indexSearch + 1], 10);
   const solve = (prevNeighboor + nextNeighboor) / 2;
-  return `${solve}`;
-};
-export const prime1 = (n, a) => {
-  let result = '';
-  const length = numbers(5, 10);
-  const hidden = numbers(1, length - 2);
-  for (let i = 0; i < length; i += 1) {
-    const current = (n + (a * i));
-    result += (i !== hidden) ? `${current} ` : '.. ';
-  }
-  return result;
-};
-
-export const prime2 = (str) => {
-  const sort = str.split(' ');
-  const index = sort.indexOf('..');
-  const pastNumber = parseInt(sort[index - 1], 10);
-  const nextNumber = parseInt(sort[index + 1], 10);
-  const solve = (pastNumber + nextNumber) / 2;
   return `${solve}`;
 };
