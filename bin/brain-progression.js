@@ -1,20 +1,5 @@
-import start from '../scr/cli.js';
-import { answer, checkAnswer } from '../scr/worlds.js';
-import { numbers, prog, progression } from '../scr/math.js';
+#!/usr/bin/env node
 
-const get = () => {
-  const username = start('What number is missing in the progression?');
+import gameProg from '../scr/games/progression.js';
 
-  for (let attempts = 0; attempts < 3; attempts += 1) {
-    const n = numbers();
-    const a = numbers(2, 20);
-    const problem = prog(n, a);
-    const userAnswer = answer(problem, 'string');
-    const correctAnswer = progression(problem);
-
-    if (!checkAnswer(userAnswer, correctAnswer, username, attempts)) break;
-  }
-};
-
-get();
-export default get;
+gameProg();
