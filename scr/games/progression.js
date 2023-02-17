@@ -16,5 +16,4 @@ const get = () => {
   }
 };
 
-get();
 export default get;
