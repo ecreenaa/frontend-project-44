@@ -6,6 +6,7 @@
     cd frontend-project-44
     make install
     npm link</pre>
+
 [![asciicast](https://asciinema.org/a/BCMEmJGVd0ZnTFcwMjpjDrled.svg)](https://asciinema.org/a/BCMEmJGVd0ZnTFcwMjpjDrled)
 [![asciicast](https://asciinema.org/a/jWx2fdk8TI60NSHcOnzYhkLRs.svg)](https://asciinema.org/a/jWx2fdk8TI60NSHcOnzYhkLRs)
 [![asciicast](https://asciinema.org/a/ziT41GIdBb6DnHCLEauvesNfP.svg)](https://asciinema.org/a/ziT41GIdBb6DnHCLEauvesNfP)
