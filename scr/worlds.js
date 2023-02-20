@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 export const answer = (meanig, data) => {
-  const result = readlineSync.question(`Question: ${meanig} \nYour answer: `);
+  const result = readlineSync.question(`Question:${meanig} \nYour answer: `);
   if (data === 'string') {
     return result;
   }
